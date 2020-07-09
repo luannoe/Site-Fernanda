@@ -3,21 +3,24 @@ import { css } from '@emotion/core';
 export const HeaderWrapper = ({
   theme: { colors },
   transparent,
-  hasScroll
+  hasScroll,
+  menuOpen
 }) => css`
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  background: ${transparent
-    ? hasScroll
-      ? 'rgba(255, 255, 255, 0.9)'
-      : 'rgba(255, 255, 255, 0)'
-    : 'rgba(255, 255, 255, 0.9)'};
   padding: 16px 0;
-  box-shadow: ${transparent ? 'none' : '0px 6px 30px rgba(0, 0, 0, 0.12)'};
-  backdrop-filter: blur(24px);
-  transition: background 0.3s;
+  backdrop-filter: ${menuOpen ? 'none' : 'blur(15px)'};
+  transition: background 0.3s, box-shadow 0.3s;
+
+  background: ${hasScroll || !transparent
+    ? 'rgba(255, 255, 255, 0.85)'
+    : 'rgba(255, 255, 255, 0)'};
+
+  box-shadow: ${hasScroll || !transparent
+    ? '0px 6px 30px rgba(0, 0, 0, 0.12)'
+    : 'none'};
 
   .header {
     &-content {
@@ -29,6 +32,8 @@ export const HeaderWrapper = ({
       flex: 0;
 
       img {
+        position: relative;
+        z-index: 9999;
         height: ${hasScroll ? 48 : 80}px;
         transition: height 0.3s;
       }
@@ -40,6 +45,79 @@ export const HeaderWrapper = ({
       justify-content: flex-end;
       align-items: center;
 
+      .desktop-nav {
+        display: none;
+
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+
+      .mobile-nav {
+        display: block;
+
+        @media (min-width: 992px) {
+          display: none;
+        }
+
+        .hamburger-menu {
+          cursor: pointer;
+          width: 28px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 1000;
+
+          .hamburger-menu-icon {
+            position: relative;
+            width: 28px;
+            height: 2px;
+            background: ${menuOpen ? 'transparent' : colors.secondaryAccent};
+            transition: all 0.3s;
+
+            &:after {
+              content: ' ';
+              position: absolute;
+              top: ${menuOpen ? 0 : -8}px;
+              width: 28px;
+              height: 2px;
+              background: ${colors.secondaryAccent};
+              transform: ${menuOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+              transition: all 0.3s;
+            }
+
+            &:before {
+              content: ' ';
+              position: absolute;
+              top: ${menuOpen ? 0 : 8}px;
+              width: 28px;
+              height: 2px;
+              background: ${colors.secondaryAccent};
+              transform: ${menuOpen ? 'rotate(45deg)' : 'rotate(0)'};
+              transition: all 0.3s;
+            }
+          }
+        }
+
+        &-wrapper {
+          opacity: ${menuOpen ? 1 : 0};
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background: rgba(255, 255, 255, 0.6);
+          backdrop-filter: blur(15px);
+          z-index: 999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s;
+        }
+      }
+
       nav {
         max-width: max-content;
 
@@ -48,28 +126,50 @@ export const HeaderWrapper = ({
           padding: 0;
           display: flex;
           align-items: center;
+          flex-direction: column;
+
+          @media (min-width: 992px) {
+            flex-direction: row;
+          }
 
           li {
-            margin: 0 16px;
+            margin: 16px;
             padding: 0;
             list-style: none;
             font-weight: 500;
 
-            &:first-of-type {
-              margin-left: 0;
+            @media (min-width: 992px) {
+              margin: 0 16px;
+
+              &:first-of-type {
+                margin-left: 0;
+              }
+
+              &:last-of-type {
+                margin-right: 0;
+              }
             }
 
-            &:last-of-type {
-              margin-right: 0;
-            }
-
-            a {
-              color: ${colors.secondaryAccent};
-              transition: color 0.3s;
+            .menu-link {
+              transition: color 0.3s, opacity 0.3s;
               text-decoration: none;
+              font-size: 32px;
+              font-family: 'Playfair Display', sans-serif;
+              color: #666;
+
+              @media (min-width: 992px) {
+                font-size: 16px;
+                font-family: 'Work Sans', sans-serif;
+                color: ${hasScroll || !transparent
+                  ? colors.secondaryAccent
+                  : colors.offWhiteAccent};
+              }
 
               &:hover {
-                color: ${colors.primary};
+                opacity: ${hasScroll || !transparent ? 1 : 0.6};
+                color: ${hasScroll || !transparent
+                  ? colors.primary
+                  : colors.offWhiteAccent};
               }
             }
           }

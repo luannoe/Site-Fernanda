@@ -2,13 +2,13 @@ import { css } from '@emotion/core';
 import BackgroundImg from '@assets/img/background.jpg';
 import ServiceBgImg from '@assets/img/service-home-bg.jpg';
 
-export const HomeWrapper = ({ theme: { colors } }) => css`
+export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
   .home {
     &-banner {
       position: relative;
       background: url(${BackgroundImg});
       background-size: cover;
-      padding: 128px 0;
+      padding: ${hasHeader ? '128px 0' : '220px 0 128px'};
       color: #fff;
 
       &:before {
@@ -47,6 +47,13 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
 
       .service-item {
         text-align: center;
+        user-select: none;
+
+        &:hover {
+          svg {
+            box-shadow: 0 16px 32px rgba(255, 255, 255, 0.24);
+          }
+        }
 
         svg {
           display: block;
@@ -56,6 +63,7 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
           color: ${colors.secondary};
           border-radius: 50%;
           background: #fff;
+          transition: box-shadow 0.3s;
         }
 
         h3 {
@@ -84,6 +92,10 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
           color: #444;
         }
 
+        p {
+          opacity: 0.7;
+        }
+
         .photos {
           .card {
             display: flex;
@@ -110,6 +122,7 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
               color: #fff;
 
               p {
+                opacity: 1;
                 flex: 1;
               }
             }
@@ -120,9 +133,9 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
 
     &-services {
       position: relative;
-      padding: 92px 0;
+      padding: 92px 0 200px;
       background: #fff url(${ServiceBgImg}) right bottom no-repeat;
-      background-size: 200px;
+      background-size: 250px;
 
       &:before {
         content: ' ';
@@ -135,6 +148,14 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
 
       .service {
         text-align: center;
+        user-select: none;
+
+        &:hover {
+          svg {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(247, 150, 93, 0.65);
+          }
+        }
 
         h3 {
           font-family: 'Playfair Display', sans-serif;
@@ -151,7 +172,7 @@ export const HomeWrapper = ({ theme: { colors } }) => css`
           background: ${colors.primary}
             linear-gradient(135deg, ${colors.primary}, ${colors.primaryAccent})
             no-repeat;
-          transition: background 0.4s;
+          transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
         }
       }
     }

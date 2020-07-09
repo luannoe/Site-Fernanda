@@ -5,16 +5,17 @@ import PropTypes from 'prop-types';
 import ButtonCSS from './style';
 
 export const Button = forwardRef(
-  ({ children, icon, color, type, ...props }, ref) => {
+  ({ children, icon, color, type, className, hoverEffect, ...props }, ref) => {
     return (
-      <button
+      <a
         ref={ref}
-        css={theme => ButtonCSS({ theme, children, color, type })}
+        css={theme => ButtonCSS({ theme, icon, color, type, hoverEffect })}
+        className={`${className} button`}
         {...props}
       >
         {icon && icon}
-        {children && children}
-      </button>
+        {children && <span>{children}</span>}
+      </a>
     );
   }
 );
@@ -25,6 +26,8 @@ Button.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.node,
   type: PropTypes.oneOf(['normal', 'outline']),
+  className: PropTypes.string,
+  hoverEffect: PropTypes.oneOf(['normal', 'transform']),
   color: PropTypes.oneOf([
     'primaryGradient',
     'primary',
@@ -43,6 +46,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'normal',
+  hoverEffect: 'normal',
   color: 'primaryGradient'
 };
 

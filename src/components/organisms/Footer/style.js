@@ -1,6 +1,8 @@
 import { css } from '@emotion/core';
 
 export const FooterWrapper = ({ theme: { colors } }) => css`
+  margin-top: -14px;
+  position: relative;
   background: ${colors.secondaryAccent};
   padding: 92px 0 72px;
   color: #fff;

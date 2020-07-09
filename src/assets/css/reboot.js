@@ -143,16 +143,6 @@ export const RebootStyle = css`
     text-decoration: underline;
   }
 
-  a:not([href]) {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  a:not([href]):hover {
-    color: inherit;
-    text-decoration: none;
-  }
-
   pre,
   code,
   kbd,

@@ -7,61 +7,109 @@ const getColor = ({ theme: { colors }, color }) => {
         linear-gradient(135deg, ${colors.primary}, ${colors.primaryAccent})
         no-repeat;
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(247, 150, 93, 0.6);
+      }
     `,
     primary: css`
       background: ${colors.primary};
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(247, 150, 93, 0.6);
+      }
     `,
     primaryAccent: css`
       background: ${colors.primaryAccent};
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(247, 150, 93, 0.6);
+      }
     `,
     secondaryGradient: css`
       background: ${colors.secondary}
         linear-gradient(135deg, ${colors.secondary}, ${colors.secondaryAccent})
         no-repeat;
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(119, 147, 112, 0.4);
+      }
     `,
     secondary: css`
       background: ${colors.secondary};
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(119, 147, 112, 0.3);
+      }
     `,
     secondaryAccent: css`
       background: ${colors.secondaryAccent};
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(119, 147, 112, 0.4);
+      }
     `,
     offWhiteGradient: css`
       background: ${colors.offWhite}
         linear-gradient(135deg, ${colors.offWhite}, ${colors.offWhiteAccent})
         no-repeat;
       color: ${colors.secondaryAccent};
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
     `,
     offWhite: css`
       background: ${colors.offWhite};
       color: ${colors.secondaryAccent};
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
     `,
     offWhiteAccent: css`
       background: ${colors.offWhiteAccent};
       color: ${colors.secondaryAccent};
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
     `,
     white: css`
       background: #fff;
       color: ${colors.secondaryAccent};
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
     `,
     gray: css`
       background: #777;
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
     `,
     black: css`
       background: #000;
       color: #fff;
+
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
     `
   };
 
   return colorsObj[color] || colorsObj['primaryGradient'];
 };
 
-const getOutlineColor = ({ theme: { colors }, color, type }) => {
+const getOutlineColor = ({ theme: { colors }, color }) => {
   const background = css`
     background: transparent;
   `;
@@ -132,34 +180,41 @@ const getOutlineColor = ({ theme: { colors }, color, type }) => {
   return colorsObj[color] || colorsObj['primaryGradient'];
 };
 
-export const ButtonCSS = ({ theme, children, color, type }) => {
-  return css`
+export const ButtonCSS = ({ theme, icon, color, type, hoverEffect }) => css`
+  &.button {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     border: none;
-    padding: ${type === 'outline' ? '6px 18px' : '8px 20px'};
+    max-width: max-content;
+    padding: ${type === 'outline' ? '8px 22px' : '10px 24px'};
     border-radius: 50px;
-    transition: all 0.3s;
+    transition: color 0.3s, opacity 0.3s, box-shadow 0.3s, transform 0.3s;
     font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
     ${type === 'outline'
       ? getOutlineColor({ theme, color })
       : getColor({ theme, color })}
 
     &:hover {
-      background-position: 200px;
       opacity: 0.9;
+      transform: ${hoverEffect === 'transform'
+        ? 'translateY(-3px)'
+        : 'translateY(0)'};
     }
 
     &:focus {
       outline: 1px dotted;
     }
 
-    > svg {
-      margin-right: ${children ? 14 : 0}px;
+    > span {
+      display: inline-block;
+      margin-left: ${icon ? 14 : 0}px;
     }
-  `;
-};
+  }
+`;
 
 export default ButtonCSS;

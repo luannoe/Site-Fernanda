@@ -13,11 +13,15 @@ import LogoDraw from '@assets/img/Logo-draw.svg';
 import { AiOutlineWoman } from 'react-icons/ai';
 
 export const Home = () => {
+  const headerIsTransparent = false;
+
   return (
     <TemplateDefault title='Fernanda Calistene Nutricionista' description='...'>
-      <Header />
-      <Content>
-        <div css={theme => HomeWrapper({ theme })}>
+      <Header transparent={headerIsTransparent} />
+      <Content hasHeader={!headerIsTransparent}>
+        <div
+          css={theme => HomeWrapper({ theme, hasHeader: !headerIsTransparent })}
+        >
           <div className='home-banner'>
             <div className='container'>
               <div className='row align-items-center'>
@@ -30,14 +34,14 @@ export const Home = () => {
                     standard dummy text ever since the 1500s
                   </p>
                   <div className='mt-4 ml-n2 d-flex'>
-                    <Button color='offWhite' className='mr-3'>
+                    <Button color='white' className='mr-3'>
                       Agende sua consulta agora!
                     </Button>
 
                     <Button color='secondary'>Como posso te ajudar?</Button>
                   </div>
                 </div>
-                <div className='col-sm-6 pl-5'>
+                {/*<div className='col-sm-6 pl-5'>
                   <div className='row justify-content-center'>
                     <div className='col-sm-4'>
                       <div className='service-item'>
@@ -58,7 +62,7 @@ export const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
@@ -150,7 +154,11 @@ export const Home = () => {
                   </div>
                 </div>
                 <div className='col-12 mt-5'>
-                  <Button color='secondaryAccent' className='mx-auto'>
+                  <Button
+                    color='secondaryAccent'
+                    hoverEffect='transform'
+                    className='mx-auto'
+                  >
                     Conheça todos serviços
                   </Button>
                 </div>
