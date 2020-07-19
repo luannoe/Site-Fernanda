@@ -20,8 +20,8 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         right: 0;
         background: linear-gradient(
           135deg,
-          ${colors.primary},
-          rgba(247, 150, 93, 0.8),
+          ${colors.transparency.primary(0.9)},
+          ${colors.transparency.primaryAccent(0.6)},
           transparent
         );
       }
@@ -77,9 +77,11 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
       &-icon {
         img {
+          width: 70%;
           display: block;
-          width: 50%;
-          margin: 48px auto;
+          margin: 0 auto;
+          border-radius: 6px;
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
       }
 
@@ -142,7 +144,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         position: absolute;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.03);
+        background: rgba(0, 0, 0, 0.05);
         top: 0;
       }
 
@@ -153,13 +155,18 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         &:hover {
           svg {
             transform: translateY(-4px);
-            box-shadow: 0 16px 32px rgba(247, 150, 93, 0.65);
+            box-shadow: 0 16px 32px ${colors.transparency.primaryAccent(0.6)};
           }
         }
 
         h3 {
           font-family: 'Playfair Display', sans-serif;
+          color: #444;
           font-weight: 600;
+        }
+
+        p {
+          opacity: 0.7;
         }
 
         svg {
@@ -169,6 +176,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
           padding: 14px;
           color: #fff;
           border-radius: 50%;
+          opacity: 0.85;
           background: ${colors.primary}
             linear-gradient(135deg, ${colors.primary}, ${colors.primaryAccent})
             no-repeat;

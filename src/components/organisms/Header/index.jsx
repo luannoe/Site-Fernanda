@@ -51,9 +51,9 @@ export const Header = ({ transparent }) => {
         <li>
           <Button
             icon={<FiCalendar />}
-            hoverEffect='transform'
-            color={hasScroll || !transparent ? 'primaryGradient' : 'offWhite'}
+            color={hasScroll || !transparent ? 'primaryDegrade' : 'offWhite'}
             type={hasScroll || !transparent ? 'normal' : 'outline'}
+            opacity={0.85}
           >
             Agendar consulta
           </Button>

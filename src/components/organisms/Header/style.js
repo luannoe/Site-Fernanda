@@ -139,36 +139,35 @@ export const HeaderWrapper = ({
             font-weight: 500;
 
             @media (min-width: 992px) {
-              margin: 0 16px;
-
-              &:first-of-type {
-                margin-left: 0;
-              }
+              margin: 0;
 
               &:last-of-type {
-                margin-right: 0;
+                margin-left: 16px;
               }
             }
 
             .menu-link {
+              display: inline-block;
               transition: color 0.3s, opacity 0.3s;
               text-decoration: none;
               font-size: 32px;
               font-family: 'Playfair Display', sans-serif;
               color: #666;
+              padding: 16px;
 
               @media (min-width: 992px) {
                 font-size: 16px;
                 font-family: 'Work Sans', sans-serif;
+                border-radius: 4px;
                 color: ${hasScroll || !transparent
-                  ? colors.secondaryAccent
+                  ? colors.secondaryAccentDarker
                   : colors.offWhiteAccent};
               }
 
               &:hover {
                 opacity: ${hasScroll || !transparent ? 1 : 0.6};
                 color: ${hasScroll || !transparent
-                  ? colors.primary
+                  ? colors.secondary
                   : colors.offWhiteAccent};
               }
             }

@@ -5,11 +5,34 @@ import PropTypes from 'prop-types';
 import ButtonCSS from './style';
 
 export const Button = forwardRef(
-  ({ children, icon, color, type, className, hoverEffect, ...props }, ref) => {
+  (
+    {
+      children,
+      icon,
+      color,
+      textColor,
+      opacity,
+      type,
+      className,
+      hoverEffect,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <a
         ref={ref}
-        css={theme => ButtonCSS({ theme, icon, color, type, hoverEffect })}
+        css={theme =>
+          ButtonCSS({
+            theme,
+            icon,
+            color,
+            textColor,
+            type,
+            hoverEffect,
+            opacity
+          })
+        }
         className={`${className} button`}
         {...props}
       >
@@ -28,6 +51,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['normal', 'outline']),
   className: PropTypes.string,
   hoverEffect: PropTypes.oneOf(['normal', 'transform']),
+  opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.oneOf([
     'primaryGradient',
     'primary',
@@ -35,7 +59,20 @@ Button.propTypes = {
     'secondaryGradient',
     'secondary',
     'secondaryAccent',
+    'secondaryAccentDarker',
     'offWhiteGradient',
+    'offWhite',
+    'offWhiteAccent',
+    'white',
+    'gray',
+    'black'
+  ]),
+  textColor: PropTypes.oneOf([
+    'primary',
+    'primaryAccent',
+    'secondary',
+    'secondaryAccent',
+    'secondaryAccentDarker',
     'offWhite',
     'offWhiteAccent',
     'white',
@@ -47,7 +84,9 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'normal',
   hoverEffect: 'normal',
-  color: 'primaryGradient'
+  opacity: 1,
+  color: 'primaryGradient',
+  textColor: 'white'
 };
 
 export default Button;

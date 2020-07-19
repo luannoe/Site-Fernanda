@@ -8,7 +8,8 @@ import HomeWrapper from '@css/home';
 
 import { TiLeaf, TiHeartOutline } from 'react-icons/ti';
 
-import LogoDraw from '@assets/img/Logo-draw.svg';
+import LogoDraw from '@assets/img/logo-draw.svg';
+import Photo from '@assets/img/foto.jpg';
 
 import { AiOutlineWoman } from 'react-icons/ai';
 
@@ -34,11 +35,13 @@ export const Home = () => {
                     standard dummy text ever since the 1500s
                   </p>
                   <div className='mt-4 ml-n2 d-flex'>
-                    <Button color='white' className='mr-3'>
+                    <Button
+                      color='white'
+                      textColor='secondaryAccentDarker'
+                      className='mr-3'
+                    >
                       Agende sua consulta agora!
                     </Button>
-
-                    <Button color='secondary'>Como posso te ajudar?</Button>
                   </div>
                 </div>
                 {/*<div className='col-sm-6 pl-5'>
@@ -70,13 +73,19 @@ export const Home = () => {
           <div className='home-about'>
             <div className='container'>
               <div className='row'>
-                <div className='col-sm-4'>
+                <div className='col-sm-5'>
                   <div className='home-about-icon'>
-                    <img src={LogoDraw} />
+                    <img src={Photo} />
                   </div>
                 </div>
-                <div className='col-sm-8'>
+                <div className='col-sm-7'>
                   <div className='home-about-content'>
+                    <img
+                      src={LogoDraw}
+                      alt='Desenho do coração com uma folha'
+                      width='80px'
+                      className='mb-5'
+                    />
                     <h2>Olá, sou a Fernanda Calistene!</h2>
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
@@ -89,31 +98,14 @@ export const Home = () => {
                       literature from 45 BC, making it over 2000 years old.
                     </p>
 
-                    <div className='photos mt-5 pt-3'>
-                      <div className='row'>
-                        <div className='col-4'>
-                          <div className='card'>
-                            <img src='https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80' />
-                          </div>
-                        </div>
-                        <div className='col-4'>
-                          <div className='card with-content'>
-                            <h3>Me conheça melhor!</h3>
-                            <p>
-                              Contrary to popular belief, Lorem Ipsum is not
-                              simply random text. It has roots in a piece of
-                              classical.
-                            </p>
-                            <Button color='white'>Saiba mais</Button>
-                          </div>
-                        </div>
-                        <div className='col-4'>
-                          <div className='card'>
-                            <img src='https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <Button
+                      className='mt-5 ml-n2'
+                      color='secondaryAccent'
+                      textColor='white'
+                      hoverEffect='transform'
+                    >
+                      Me conheça melhor
+                    </Button>
                   </div>
                 </div>
               </div>

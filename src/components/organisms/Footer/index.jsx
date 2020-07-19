@@ -7,7 +7,7 @@ import Theme from '@css/theme';
 export const Footer = () => {
   return (
     <>
-      <MountainsSVG color={Theme.colors.secondaryAccent} />
+      <MountainsSVG color={Theme.colors.secondary} />
 
       <footer css={theme => FooterWrapper({ theme })}>
         <div className='container'>

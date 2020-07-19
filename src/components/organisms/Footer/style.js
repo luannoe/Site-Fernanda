@@ -3,7 +3,8 @@ import { css } from '@emotion/core';
 export const FooterWrapper = ({ theme: { colors } }) => css`
   margin-top: -14px;
   position: relative;
-  background: ${colors.secondaryAccent};
+  background: ${colors.secondary}
+    linear-gradient(0, ${colors.secondaryAccentDarker}, ${colors.secondary});
   padding: 92px 0 72px;
   color: #fff;
 
