@@ -7,6 +7,5 @@ module.exports = withPlugins([withTM, withImages], {
   compress: true,
   devIndicators: {
     autoPrerender: false
-  },
-  exportPathMap: () => ({ '/': { page: '/' } })
+  }
 });
