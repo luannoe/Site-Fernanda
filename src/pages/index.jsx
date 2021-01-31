@@ -17,7 +17,10 @@ export const Home = () => {
   const headerIsTransparent = false;
 
   return (
-    <TemplateDefault title='Fernanda Calistene Nutricionista' description='...'>
+    <TemplateDefault
+      title='Fernanda Calistene Nutricionista - Taiobeiras - MG'
+      description='Especialista em vegetarianismo, veganismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável!'
+    >
       <Header transparent={headerIsTransparent} />
       <Content hasHeader={!headerIsTransparent}>
         <div
@@ -28,17 +31,18 @@ export const Home = () => {
               <div className='row align-items-center'>
                 <div className='col-sm-6 pr-5'>
                   <h5>Saúde física e mental</h5>
-                  <h1>Nutricionista em Belo Horizonte</h1>
+                  <h1>Nutricionista em Taiobeiras</h1>
                   <p className='pb-2'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s
+                    Especialista em vegetarianismo, veganismo e saúde da mulher.
+                    Vou te ajudar a ter uma vida mais saudável!
                   </p>
                   <div className='mt-4 ml-n2 d-flex'>
                     <Button
                       color='white'
                       textColor='secondaryAccentDarker'
                       className='mr-3'
+                      href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
+                      target='_blank'
                     >
                       Agende sua consulta agora!
                     </Button>
@@ -70,7 +74,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className='home-about'>
+          <div className='home-about' id='sobre'>
             <div className='container'>
               <div className='row'>
                 <div className='col-sm-5'>
@@ -88,14 +92,19 @@ export const Home = () => {
                     />
                     <h2>Olá, sou a Fernanda Calistene!</h2>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s.
+                      Referência em Nutrição vegetariana e vegana além do
+                      atendimento com excelência. Meu atendimento é baseado na
+                      individualidade do paciente, buscando sempre aliar
+                      escolhas alimentares eficientes que levem em consideração
+                      estágio de vida, preferências alimentares, estilo de vida,
+                      necessidades nutricionais, presença de sintomas e metas
+                      individuais. Atendo bebês, crianças, gestantes, adultos e
+                      idosos.
                     </p>
                     <p>
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC, making it over 2000 years old.
+                      Me formei em Nutrição pela Universidade Federal de Viçosa
+                      em 2019 e desde então venho ajudando as pessoas a levarem
+                      uma vida mais saudável.
                     </p>
 
                     <Button
@@ -103,8 +112,9 @@ export const Home = () => {
                       color='secondaryAccent'
                       textColor='white'
                       hoverEffect='transform'
+                      href='tel:+5531993287275'
                     >
-                      Me conheça melhor
+                      Me ligue e conheça melhor o meu trabalho
                     </Button>
                   </div>
                 </div>
@@ -112,7 +122,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className='home-services'>
+          <div className='home-services' id='servicos'>
             <div className='container'>
               <div className='row'>
                 <div className='col-sm-4'>
@@ -120,8 +130,8 @@ export const Home = () => {
                     <TiLeaf />
                     <h3>Vegetarianismo e veganismo</h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Aprenda mais sobre esse estilo de vida e como fazer a
+                      transição de forma saudável.
                     </p>
                   </div>
                 </div>
@@ -130,8 +140,8 @@ export const Home = () => {
                     <AiOutlineWoman />
                     <h3>Saúde da mulher</h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Atendimento nutricional individualizado e personalizado
+                      para cada fase da sua vida.
                     </p>
                   </div>
                 </div>
@@ -140,8 +150,8 @@ export const Home = () => {
                     <TiHeartOutline />
                     <h3>Emagrecimento saudável</h3>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Emagreça sem sofrimento, de forma leve, descontraída e
+                      saudável!
                     </p>
                   </div>
                 </div>
@@ -150,8 +160,10 @@ export const Home = () => {
                     color='secondaryAccent'
                     hoverEffect='transform'
                     className='mx-auto'
+                    href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
+                    target='_blank'
                   >
-                    Conheça todos serviços
+                    Para mais informações, clique aqui
                   </Button>
                 </div>
               </div>

@@ -10,9 +10,10 @@ export const HeaderWrapper = ({
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 16px 0;
   backdrop-filter: ${menuOpen ? 'none' : 'blur(15px)'};
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+
+  padding: ${hasScroll ? '4px 0' : '16px 0'};
 
   background: ${hasScroll || !transparent
     ? 'rgba(255, 255, 255, 0.85)'
@@ -30,11 +31,13 @@ export const HeaderWrapper = ({
 
     &-logo-wrapper {
       flex: 0;
+      display: flex;
+      align-items: center;
 
       img {
         position: relative;
         z-index: 9999;
-        height: ${hasScroll ? 48 : 80}px;
+        height: ${hasScroll ? 40 : 80}px;
         transition: height 0.3s;
       }
     }

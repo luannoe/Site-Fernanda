@@ -10,6 +10,7 @@ import HeaderWrapper from './style';
 
 // Images
 import Logo from '@assets/img/logo.svg';
+import LogoDraw from '@assets/img/logo-draw.svg';
 import LogoWhite from '@assets/img/logo-white.svg';
 
 import menu from './menu.json';
@@ -54,6 +55,8 @@ export const Header = ({ transparent }) => {
             color={hasScroll || !transparent ? 'primaryDegrade' : 'offWhite'}
             type={hasScroll || !transparent ? 'normal' : 'outline'}
             opacity={0.85}
+            href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
+            target='_blank'
           >
             Agendar consulta
           </Button>
@@ -69,9 +72,9 @@ export const Header = ({ transparent }) => {
       <div className='container'>
         <div className='header-content'>
           <div className='header-logo-wrapper'>
-            <a href='/'>
+            <a href='#'>
               <img
-                src={hasScroll || !transparent ? Logo : LogoWhite}
+                src={hasScroll ? LogoDraw : Logo}
                 alt='Logo Fernanda Calistene Nutricionista'
               />
             </a>

@@ -1,22 +1,17 @@
 [
   {
-    "label": "Início",
-    "title": "Página inicial - Fernanda Calistene Nutricionista",
-    "url": "/"
-  },
-  {
     "label": "Sobre",
     "title": "Sobre a Fernanda Calistene Nutricionista",
-    "url": "/sobre"
+    "url": "#sobre"
   },
   {
-    "label": "Blog",
-    "title": "Blog da Fernanda Calistene Nutricionista",
-    "url": "/blog"
+    "label": "Serviços",
+    "title": "Serviços da Fernanda Calistene Nutricionista",
+    "url": "#servicos"
   },
   {
     "label": "Fale com a Nutri",
     "title": "Fale com a Fernanda Calistene Nutricionista",
-    "url": "/contato"
+    "url": "#contato"
   }
 ]

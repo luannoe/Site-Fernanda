@@ -9,18 +9,21 @@ export const Footer = () => {
     <>
       <MountainsSVG color={Theme.colors.secondary} />
 
-      <footer css={theme => FooterWrapper({ theme })}>
+      <footer css={theme => FooterWrapper({ theme })} id='contato'>
         <div className='container'>
           <div className='row'>
             <div className='col-sm-8 pr-lg-5'>
               <h3>Fernanda Calistene</h3>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
+                Me siga no Instagram:{' '}
+                <a
+                  href='https://www.instagram.com/fer.calistene/'
+                  target='_blank'
+                  rel='noreferrer'
+                  style={{ color: '#fff', textDecoration: 'underline' }}
+                >
+                  @fer.calistene
+                </a>
               </p>
             </div>
             <div className='col-sm-4'>
