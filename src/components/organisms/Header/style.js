@@ -127,6 +127,7 @@ export const HeaderWrapper = ({
           align-items: center;
           justify-content: center;
           transition: all 0.3s;
+          pointer-events: ${menuOpen ? 'auto' : 'none'};
         }
       }
 
