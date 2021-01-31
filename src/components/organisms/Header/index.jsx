@@ -52,7 +52,7 @@ export const Header = ({ transparent }) => {
         <li>
           <Button
             icon={<FiCalendar />}
-            color={hasScroll || !transparent ? 'primaryDegrade' : 'offWhite'}
+            color={hasScroll || !transparent ? 'primaryGradient' : 'offWhite'}
             type={hasScroll || !transparent ? 'normal' : 'outline'}
             opacity={0.85}
             href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
