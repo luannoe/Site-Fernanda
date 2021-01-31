@@ -44,7 +44,12 @@ export const Header = ({ transparent }) => {
       <ul>
         {menu.map(menuItem => (
           <li key={menuItem.label}>
-            <a href={menuItem.url} title={menuItem.title} className='menu-link'>
+            <a
+              href={menuItem.url}
+              title={menuItem.title}
+              className='menu-link'
+              onClick={() => setMenuOpen(false)}
+            >
               {menuItem.label}
             </a>
           </li>
@@ -72,7 +77,7 @@ export const Header = ({ transparent }) => {
       <div className='container'>
         <div className='header-content'>
           <div className='header-logo-wrapper'>
-            <a href='#'>
+            <a href='#' onClick={() => setMenuOpen(false)}>
               <img
                 src={hasScroll ? LogoDraw : Logo}
                 alt='Logo Fernanda Calistene Nutricionista'

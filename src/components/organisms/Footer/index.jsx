@@ -12,7 +12,7 @@ export const Footer = () => {
       <footer css={theme => FooterWrapper({ theme })} id='contato'>
         <div className='container'>
           <div className='row'>
-            <div className='col-sm-8 pr-lg-5'>
+            <div className='col-12 col-md-6 pr-lg-5'>
               <h3>Fernanda Calistene</h3>
               <p>
                 Me siga no Instagram:{' '}
@@ -26,7 +26,7 @@ export const Footer = () => {
                 </a>
               </p>
             </div>
-            <div className='col-sm-4'>
+            <div className='col-12 col-md-6'>
               <h3>Contatos</h3>
               <p className='mb-2'>
                 <strong>Whatsapp</strong>: (31) 99328-7275

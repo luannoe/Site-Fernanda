@@ -8,8 +8,12 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
       position: relative;
       background: url(${BackgroundImg});
       background-size: cover;
-      padding: ${hasHeader ? '128px 0' : '220px 0 128px'};
+      padding: 48px 16px;
       color: #fff;
+
+      @media (min-width: 768px) {
+        padding: ${hasHeader ? '128px 0' : '220px 0 128px'};
+      }
 
       &:before {
         content: ' ';
@@ -28,11 +32,15 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
       h1 {
         font-family: 'Playfair Display', sans-serif;
-        font-size: 54px;
+        font-size: 34px;
         color: #fff;
         line-height: 1.1;
         margin-bottom: 24px;
         font-weight: 400;
+
+        @media (min-width: 768px) {
+          font-size: 54px;
+        }
 
         span {
           font-size: 34px;
@@ -73,7 +81,18 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
     }
 
     &-about {
-      padding: 92px 0;
+      padding: 48px 16px;
+
+      @media (min-width: 768px) {
+        padding: 92px 0;
+      }
+
+      @media (max-width: 991px) {
+        .col-lg-5 {
+          margin-top: 32px;
+          order: 1;
+        }
+      }
 
       &-icon {
         img {
@@ -135,9 +154,13 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
     &-services {
       position: relative;
-      padding: 92px 0 200px;
+      padding: 48px 0 200px;
       background: #fff url(${ServiceBgImg}) right bottom no-repeat;
       background-size: 250px;
+
+      @media (min-width: 768px) {
+        padding: 92px 0 200px;
+      }
 
       &:before {
         content: ' ';
@@ -149,8 +172,13 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
       }
 
       .service {
+        padding: 0 16px;
         text-align: center;
         user-select: none;
+
+        @media (min-width: 768px) {
+          padding: 0;
+        }
 
         &:hover {
           svg {

@@ -5,8 +5,12 @@ export const FooterWrapper = ({ theme: { colors } }) => css`
   position: relative;
   background: ${colors.secondary}
     linear-gradient(0, ${colors.secondaryAccentDarker}, ${colors.secondary});
-  padding: 92px 0 72px;
+  padding: 48px 16px 32px;
   color: #fff;
+
+  @media (min-width: 768px) {
+    padding: 92px 0 72px;
+  }
 
   h3 {
     font-family: 'Playfair Display', sans-serif;

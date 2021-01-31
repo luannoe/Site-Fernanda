@@ -29,7 +29,7 @@ export const Home = () => {
           <div className='home-banner'>
             <div className='container'>
               <div className='row align-items-center'>
-                <div className='col-sm-6 pr-5'>
+                <div className='col-12 col-lg-6 pr-5'>
                   <h5>Saúde física e mental</h5>
                   <h1>Nutricionista em Taiobeiras</h1>
                   <p className='pb-2'>
@@ -77,12 +77,12 @@ export const Home = () => {
           <div className='home-about' id='sobre'>
             <div className='container'>
               <div className='row'>
-                <div className='col-sm-5'>
+                <div className='col-12 col-lg-5'>
                   <div className='home-about-icon'>
                     <img src={Photo} />
                   </div>
                 </div>
-                <div className='col-sm-7'>
+                <div className='col-12 col-lg-7'>
                   <div className='home-about-content'>
                     <img
                       src={LogoDraw}
@@ -114,7 +114,7 @@ export const Home = () => {
                       hoverEffect='transform'
                       href='tel:+5531993287275'
                     >
-                      Me ligue e conheça melhor o meu trabalho
+                      Ligue agora!
                     </Button>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export const Home = () => {
           <div className='home-services' id='servicos'>
             <div className='container'>
               <div className='row'>
-                <div className='col-sm-4'>
+                <div className='col-12 col-md-4'>
                   <div className='service'>
                     <TiLeaf />
                     <h3>Vegetarianismo e veganismo</h3>
@@ -135,7 +135,7 @@ export const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className='col-sm-4'>
+                <div className='col-12 col-md-4'>
                   <div className='service'>
                     <AiOutlineWoman />
                     <h3>Saúde da mulher</h3>
@@ -145,7 +145,7 @@ export const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className='col-sm-4'>
+                <div className='col-12 col-md-4'>
                   <div className='service'>
                     <TiHeartOutline />
                     <h3>Emagrecimento saudável</h3>

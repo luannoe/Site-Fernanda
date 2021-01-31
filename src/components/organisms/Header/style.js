@@ -13,7 +13,7 @@ export const HeaderWrapper = ({
   backdrop-filter: ${menuOpen ? 'none' : 'blur(15px)'};
   transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
 
-  padding: ${hasScroll ? '4px 0' : '16px 0'};
+  padding: ${hasScroll ? '8px 16px' : '16px'};
 
   background: ${hasScroll || !transparent
     ? 'rgba(255, 255, 255, 0.85)'
@@ -22,6 +22,10 @@ export const HeaderWrapper = ({
   box-shadow: ${hasScroll || !transparent
     ? '0px 6px 30px rgba(0, 0, 0, 0.12)'
     : 'none'};
+
+  @media (min-width: 768px) {
+    padding: ${hasScroll ? '8px 0' : '16px 0'};
+  }
 
   .header {
     &-content {
@@ -39,6 +43,11 @@ export const HeaderWrapper = ({
         z-index: 9999;
         height: ${hasScroll ? 40 : 80}px;
         transition: height 0.3s;
+        max-width: 190px;
+
+        @media (min-width: 768px) {
+          width: auto;
+        }
       }
     }
 
