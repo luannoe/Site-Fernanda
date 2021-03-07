@@ -32,7 +32,7 @@ export const Footer = () => {
                 <strong>Whatsapp</strong>: (31) 99328-7275
               </p>
               <p>
-                <strong>E-mail</strong>: contato@nutrifernanda.com.br
+                <strong>E-mail</strong>: calistenefernanda@gmail.com
               </p>
             </div>
           </div>
