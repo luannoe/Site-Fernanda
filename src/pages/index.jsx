@@ -7,11 +7,11 @@ import Content from '@components/organisms/Content';
 import HomeWrapper from '@css/home';
 
 import { TiLeaf, TiHeartOutline } from 'react-icons/ti';
+import { AiOutlineWoman } from 'react-icons/ai';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import LogoDraw from '@assets/img/logo-draw.svg';
-import Photo from '@assets/img/foto.jpg';
-
-import { AiOutlineWoman } from 'react-icons/ai';
+import Photo from '@assets/img/fernanda.jpg';
 
 export const Home = () => {
   const headerIsTransparent = false;
@@ -29,12 +29,15 @@ export const Home = () => {
           <div className='home-banner'>
             <div className='container'>
               <div className='row align-items-center'>
-                <div className='col-12 col-lg-6 pr-5'>
-                  <h5>Saúde física e mental</h5>
+                <div className='col-12 pr-5'>
+                  <h5>Seja bem-vind@</h5>
                   <h1>Nutricionista em Taiobeiras</h1>
+                  <p className='pb-0'>
+                    Foco em nutrição vegetariana e vegana, saúde da mulher e
+                    prevenção de doenças.
+                  </p>
                   <p className='pb-2'>
-                    Especialista em vegetarianismo, veganismo e saúde da mulher.
-                    Vou te ajudar a ter uma vida mais saudável!
+                    Te ajudo a ter uma alimentação mais saudável e consciente!
                   </p>
                   <div className='mt-4 ml-n2 d-flex'>
                     <Button
@@ -92,30 +95,40 @@ export const Home = () => {
                     />
                     <h2>Olá, sou a Fernanda Calistene!</h2>
                     <p>
-                      Referência em Nutrição vegetariana e vegana além do
-                      atendimento com excelência. Meu atendimento é baseado na
-                      individualidade do paciente, buscando sempre aliar
-                      escolhas alimentares eficientes que levem em consideração
-                      estágio de vida, preferências alimentares, estilo de vida,
-                      necessidades nutricionais, presença de sintomas e metas
-                      individuais. Atendo bebês, crianças, gestantes, adultos e
-                      idosos.
+                      Nutricionista formada pela Universidade Federal de Viçosa,
+                      acredito no cuidado a saúde por meio da alimentação
+                      natural, simples e afetiva, sem modismos!
                     </p>
                     <p>
-                      Me formei em Nutrição pela Universidade Federal de Viçosa
-                      em 2019 e desde então venho ajudando as pessoas a levarem
-                      uma vida mais saudável.
+                      A nutrição que pratico leva em consideração preferências
+                      alimentares, estilo de vida, metas e necessidades
+                      nutricionais individuais. Com foco na prevenção de
+                      doenças, meu principal objetivo é auxiliar as pessoas na
+                      busca por mais qualidade de vida através da alimentação.
+                    </p>
+                    <p className='quotes'>
+                      <span>
+                        A mudança de hábitos alimentares deve ser gradual e
+                        prazerosa para que seja duradoura! Se alimentar é muito
+                        mais que um ato fisiológico, engloba crenças, valores,
+                        emoções e sentimentos.
+                      </span>
                     </p>
 
-                    <Button
-                      className='mt-5 ml-n2'
-                      color='secondaryAccent'
-                      textColor='white'
-                      hoverEffect='transform'
-                      href='tel:+5531993287275'
-                    >
-                      Ligue agora!
-                    </Button>
+                    <div className='social'>
+                      <a
+                        href='https://www.instagram.com/nutri.fernandacalistene'
+                        title='Perfil no Instagram'
+                      >
+                        <FaInstagram />
+                      </a>
+                      <a
+                        href='https://www.linkedin.com/in/fernanda-calistene/'
+                        title='Perfil no LinkedIn'
+                      >
+                        <FaLinkedinIn />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -150,7 +163,7 @@ export const Home = () => {
                     <TiHeartOutline />
                     <h3>Emagrecimento saudável</h3>
                     <p>
-                      Emagreça sem sofrimento, de forma leve, descontraída e
+                      Emagreça sem dietas da moda, de forma leve, descontraída e
                       saudável!
                     </p>
                   </div>
@@ -163,7 +176,7 @@ export const Home = () => {
                     href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
                     target='_blank'
                   >
-                    Para mais informações, clique aqui
+                    Mais informações
                   </Button>
                 </div>
               </div>

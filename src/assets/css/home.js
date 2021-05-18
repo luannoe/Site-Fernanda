@@ -6,7 +6,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
   .home {
     &-banner {
       position: relative;
-      background: url(${BackgroundImg});
+      background: url(${BackgroundImg}) center bottom;
       background-size: cover;
       padding: 48px 16px;
       color: #fff;
@@ -115,6 +115,48 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
         p {
           opacity: 0.7;
+        }
+
+        .quotes {
+          position: relative;
+          padding-left: 48px;
+
+          span {
+            font-style: italic;
+          }
+
+          &:before {
+            content: '"';
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Catamaran', sans-serif;
+            font-size: 80px;
+            line-height: 80px;
+            transform: rotateY(180deg);
+            color: ${colors.secondary};
+          }
+        }
+
+        .social {
+          display: flex;
+          margin-top: 36px;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            background: ${colors.secondaryAccent};
+            border-radius: 24px;
+            color: #fff;
+            font-size: 24px;
+
+            & + a {
+              margin-left: 14px;
+            }
+          }
         }
 
         .photos {
