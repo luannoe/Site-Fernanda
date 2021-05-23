@@ -19,7 +19,7 @@ export const Home = () => {
   return (
     <TemplateDefault
       title='Nutricionista Fernanda – Atendimento Online e Presencial'
-      description='Especialista em vegetarianismo, veganismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável!'
+      description='Especialista em vegetarianismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável! Atendimentos online sem fronteiras ou presencial em Taiobeiras-MG'
     >
       <Header transparent={headerIsTransparent} />
       <Content hasHeader={!headerIsTransparent}>
