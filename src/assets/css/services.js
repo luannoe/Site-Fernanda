@@ -8,7 +8,7 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
       position: relative;
       background: url(${BackgroundImg});
       background-size: cover;
-      padding: ${hasHeader ? '48px 16px' : '128px 16px 48px'};
+      padding: ${hasHeader ? '86px 16px 48px' : '154px 16px 48px'};
       color: #fff;
 
       @media (min-width: 768px) {
@@ -79,7 +79,7 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
         order: 0;
 
         .photo {
-          margin-top: 48px;
+          margin-top: 32px;
           display: flex;
           align-items: center;
           justify-content: center;

@@ -8,7 +8,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
       position: relative;
       background: url(${BackgroundImg}) center bottom;
       background-size: cover;
-      padding: 48px 16px;
+      padding: ${hasHeader ? '82px 16px 48px' : '154px 16px 48px'};
       color: #fff;
 
       @media (min-width: 768px) {
