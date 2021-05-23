@@ -8,10 +8,8 @@ import ServicesWrapper from '@css/services';
 
 import { TiLeaf, TiHeartOutline } from 'react-icons/ti';
 import { AiOutlineWoman } from 'react-icons/ai';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-import LogoDraw from '@assets/img/logo-draw.svg';
-import Photo from '@assets/img/foto.jpg';
+import FernandaAtendimento from '@assets/img/fernanda-atendimento.jpg';
 
 export const Services = () => {
   const headerIsTransparent = false;
@@ -32,9 +30,7 @@ export const Services = () => {
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 pr-5'>
-                  <h5>Subtítulo</h5>
-                  <h1>Título Serviços</h1>
-                  <p className='pb-0'>Descrição</p>
+                  <h1>Atendimentos</h1>
                 </div>
               </div>
             </div>
@@ -43,7 +39,13 @@ export const Services = () => {
           <div className='services-services' id='servicos'>
             <div className='container'>
               <div className='row'>
-                <div className='col-12'>
+                <div className='col-12 col-lg-6 photo-column'>
+                  <div className='photo'>
+                    <img src={FernandaAtendimento} />
+                  </div>
+                </div>
+
+                <div className='col-12 col-lg-6 resume'>
                   <p>
                     Os atendimentos nutricionais são voltados a promover uma
                     alimentação equilibrada e consciente, de forma
@@ -57,49 +59,57 @@ export const Services = () => {
                     suplementos nutricionais totalmente personalizados e
                     adequados aos seus hábitos e necessidades.
                   </p>
-
-                  <h2>Público e linhas de atendimento:</h2>
                 </div>
 
-                <div className='col-12 col-md-4'>
-                  <div className='service'>
-                    <TiLeaf />
-                    <h3>Vegetarianismo e veganismo</h3>
-                    <p>
-                      Indivíduos adultos e adolescentes que não consomem carne e
-                      outros alimentos de origem animal, ou que desejam parar ou
-                      diminuir o consumo dos mesmos, e que buscam uma
-                      nutricionista atualizada e capacitada em nutrição
-                      vegetariana.
-                    </p>
-                  </div>
-                </div>
-                <div className='col-12 col-md-4'>
-                  <div className='service'>
-                    <AiOutlineWoman />
-                    <h3>Saúde da mulher</h3>
-                    <p>
-                      Mulheres adultas e adolescentes que lidam com sintomas da
-                      TPM, Síndrome do Ovário Policístico, acne, endometriose,
-                      menopausa e climatério, candidíase etc.
-                    </p>
-                  </div>
-                </div>
-                <div className='col-12 col-md-4'>
-                  <div className='service'>
-                    <TiHeartOutline />
-                    <h3>Emagrecimento saudável</h3>
-                    <p>
-                      Indivíduos adultos, homens e mulheres, que consomem ou não
-                      alimentos de origem animal e que desejam emagrecer sem
-                      dietas da moda, de forma saudável e duradoura, por meio da
-                      mudança de hábitos e estilo de vida.
-                    </p>
-                  </div>
-                </div>
+                <hr />
 
                 <div className='col-12'>
-                  <h2>Como funciona?</h2>
+                  <div className='service'>
+                    <TiLeaf />
+                    <div>
+                      <h3>Vegetarianismo e veganismo</h3>
+                      <p>
+                        Indivíduos adultos e adolescentes que não consomem carne
+                        e outros alimentos de origem animal, ou que desejam
+                        parar ou diminuir o consumo dos mesmos, e que buscam uma
+                        nutricionista atualizada e capacitada em nutrição
+                        vegetariana.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-12'>
+                  <div className='service mt-5'>
+                    <AiOutlineWoman />
+                    <div>
+                      <h3>Saúde da mulher</h3>
+                      <p>
+                        Mulheres adultas e adolescentes que lidam com sintomas
+                        da TPM, Síndrome do Ovário Policístico, acne,
+                        endometriose, menopausa e climatério, candidíase etc.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-12'>
+                  <div className='service mt-5'>
+                    <TiHeartOutline />
+                    <div>
+                      <h3>Emagrecimento saudável</h3>
+                      <p>
+                        Indivíduos adultos, homens e mulheres, que consomem ou
+                        não alimentos de origem animal e que desejam emagrecer
+                        sem dietas da moda, de forma saudável e duradoura, por
+                        meio da mudança de hábitos e estilo de vida.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <div className='col-12'>
+                  <h2 className='mb-4'>Como funciona?</h2>
                   <p>
                     Os atendimentos são on-line, pela plataforma do Google Meet.
                     A comunicação antes e depois da consulta é feita via e-mail
@@ -109,17 +119,18 @@ export const Services = () => {
                   <ul>
                     <li>Anamnese (entrevista inicial)</li>
                     <li>Avaliação ou solicitação de exames bioquímicos</li>
-                    <li>
-                      Avaliação alimentar Definição da melhor conduta junto ao
-                      cliente
-                    </li>
+                    <li>Avaliação alimentar</li>
+                    <li>Definição da melhor conduta junto ao cliente</li>
                     <li>
                       Em cada retorno, novas condutas são estabelecidas de
                       acordo com os resultados alcançados
                     </li>
                   </ul>
 
-                  <p>O pagamento é feito via transferência bancária ou PIX.</p>
+                  <p>
+                    O pagamento é feito via transferência bancária, PIX ou
+                    cartão de crédito através do PicPay.
+                  </p>
                 </div>
 
                 <div className='col-12 mt-5'>

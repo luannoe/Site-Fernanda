@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 
 export const FooterWrapper = ({ theme: { colors } }) => css`
+  text-align: center;
   margin-top: -14px;
   position: relative;
   background: ${colors.secondary}
@@ -9,7 +10,7 @@ export const FooterWrapper = ({ theme: { colors } }) => css`
   color: #fff;
 
   @media (min-width: 768px) {
-    padding: 92px 0 72px;
+    padding: 72px 0 72px;
   }
 
   h3 {
@@ -18,11 +19,22 @@ export const FooterWrapper = ({ theme: { colors } }) => css`
     margin-bottom: 24px;
   }
 
-  ul {
-    padding: 0;
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    li {
-      list-style: none;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: white;
+      color: ${colors.secondaryAccentDarker};
+      border-radius: 24px;
+      font-size: 24px;
+      margin: 0 5px;
     }
   }
 `;

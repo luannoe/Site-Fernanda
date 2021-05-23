@@ -21,7 +21,7 @@ export const Header = ({ transparent }) => {
 
   useEffect(() => {
     const checkScroll = () => {
-      setHasScroll(window.scrollY > 100);
+      setHasScroll(window.scrollY > 2);
     };
 
     window.addEventListener('scroll', checkScroll);
@@ -77,9 +77,9 @@ export const Header = ({ transparent }) => {
       <div className='container'>
         <div className='header-content'>
           <div className='header-logo-wrapper'>
-            <a href='#' onClick={() => setMenuOpen(false)}>
+            <a href='/' onClick={() => setMenuOpen(false)}>
               <img
-                src={hasScroll ? LogoDraw : Logo}
+                src={hasScroll ? LogoDraw : transparent ? LogoWhite : Logo}
                 alt='Logo Fernanda Calistene Nutricionista'
               />
             </a>

@@ -2,16 +2,16 @@
   {
     "label": "Sobre",
     "title": "Sobre a Fernanda Calistene Nutricionista",
-    "url": "#sobre"
+    "url": "/#sobre"
   },
   {
-    "label": "Serviços",
-    "title": "Serviços da Fernanda Calistene Nutricionista",
-    "url": "/servicos"
+    "label": "Atendimentos",
+    "title": "Atendimentos da Fernanda Calistene Nutricionista",
+    "url": "/atendimentos"
   },
   {
     "label": "Fale com a Nutri",
     "title": "Fale com a Fernanda Calistene Nutricionista",
-    "url": "#contato"
+    "url": "/#contato"
   }
 ]

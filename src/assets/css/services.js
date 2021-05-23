@@ -8,11 +8,11 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
       position: relative;
       background: url(${BackgroundImg});
       background-size: cover;
-      padding: 48px 16px;
+      padding: ${hasHeader ? '48px 16px' : '128px 16px 48px'};
       color: #fff;
 
       @media (min-width: 768px) {
-        padding: ${hasHeader ? '128px 0' : '220px 0 128px'};
+        padding: ${hasHeader ? '98px 0 64px' : '156px 0 64px'};
       }
 
       &:before {
@@ -56,21 +56,74 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
 
     &-services {
       position: relative;
-      padding: 48px 0 200px;
-      background: #fff;
+      padding: 48px 16px 200px;
+      background: #fff url(${ServiceBgImg}) right bottom no-repeat;
       background-size: 250px;
 
       @media (min-width: 768px) {
         padding: 92px 0 200px;
       }
 
-      .service {
-        padding: 0 16px;
-        text-align: center;
-        user-select: none;
+      .resume {
+        order: -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: 992px) {
+          order: 0;
+        }
+      }
+
+      .photo-column {
+        order: 0;
+
+        .photo {
+          margin-top: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media (min-width: 992px) {
+            margin-top: 0px;
+          }
+
+          img {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+
+      hr {
+        border: 0;
+        background: 0;
+        border-top: 1px solid #ddd;
+        width: 60%;
+        margin: 48px auto;
 
         @media (min-width: 768px) {
+          margin: 82px auto;
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .service {
+        display: flex;
+        flex-direction: column;
+        user-select: none;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          flex-direction: row;
           padding: 0;
+          text-align: left;
         }
 
         &:hover {
@@ -91,6 +144,9 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
         }
 
         svg {
+          flex: 0 0 92px;
+          height: 92px;
+          width: 92px;
           display: block;
           margin: 0 auto 24px;
           font-size: 92px;
@@ -102,6 +158,14 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
             linear-gradient(135deg, ${colors.primary}, ${colors.primaryAccent})
             no-repeat;
           transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+
+          @media (min-width: 768px) {
+            margin: 0 48px 0 0;
+          }
+        }
+
+        > div {
+          flex: 1;
         }
       }
     }

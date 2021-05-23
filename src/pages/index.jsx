@@ -31,8 +31,8 @@ export const Home = () => {
               <div className='row align-items-center'>
                 <div className='col-12 pr-5'>
                   <h5>Seja bem-vind@</h5>
-                  <h1>Nutricionista em Taiobeiras</h1>
-                  <p className='pb-0'>
+                  <h1 className='mb-2'>Nutricionista em Taiobeiras</h1>
+                  <p className='mb-0'>
                     Foco em nutrição vegetariana e vegana, saúde da mulher e
                     prevenção de doenças.
                   </p>
@@ -51,28 +51,6 @@ export const Home = () => {
                     </Button>
                   </div>
                 </div>
-                {/*<div className='col-sm-6 pl-5'>
-                  <div className='row justify-content-center'>
-                    <div className='col-sm-4'>
-                      <div className='service-item'>
-                        <TiLeaf />
-                        <h3>Vegetarianismo e veganismo</h3>
-                      </div>
-                    </div>
-                    <div className='col-sm-4'>
-                      <div className='service-item'>
-                        <AiOutlineWoman />
-                        <h3>Saúde da mulher</h3>
-                      </div>
-                    </div>
-                    <div className='col-sm-4'>
-                      <div className='service-item'>
-                        <TiHeartOutline />
-                        <h3>Emagrecimento saudável</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>*/}
               </div>
             </div>
           </div>
@@ -117,14 +95,18 @@ export const Home = () => {
 
                     <div className='social'>
                       <a
-                        href='https://www.instagram.com/nutri.fernandacalistene'
+                        href='https://www.instagram.com/nutrifernandacalistene'
                         title='Perfil no Instagram'
+                        target='_blank'
+                        rel='noreferrer'
                       >
                         <FaInstagram />
                       </a>
                       <a
                         href='https://www.linkedin.com/in/fernanda-calistene/'
                         title='Perfil no LinkedIn'
+                        target='_blank'
+                        rel='noreferrer'
                       >
                         <FaLinkedinIn />
                       </a>
@@ -168,13 +150,12 @@ export const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className='col-12 mt-5'>
+                <div className='col-12 mt-4'>
                   <Button
                     color='secondaryAccent'
                     hoverEffect='transform'
                     className='mx-auto'
-                    href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
-                    target='_blank'
+                    href='/atendimentos'
                   >
                     Mais informações
                   </Button>

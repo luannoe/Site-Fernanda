@@ -10,12 +10,11 @@ export const HeaderWrapper = ({
   top: 0;
   width: 100%;
   z-index: 999;
-  backdrop-filter: ${menuOpen ? 'none' : 'blur(15px)'};
-  transition: box-shadow 0.3s, padding 0.3s;
+  transition: box-shadow 0.3s, padding 0.3s, background 0.3s;
 
   padding: ${hasScroll ? '8px 16px' : '16px'};
 
-  background: #fff;
+  background: ${hasScroll ? '#fff' : transparent ? 'transparent' : '#fff'};
 
   box-shadow: ${hasScroll || !transparent
     ? '0px 6px 30px rgba(0, 0, 0, 0.12)'

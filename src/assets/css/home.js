@@ -12,7 +12,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
       color: #fff;
 
       @media (min-width: 768px) {
-        padding: ${hasHeader ? '128px 0' : '220px 0 128px'};
+        padding: ${hasHeader ? '162px 0 128px' : '220px 0 128px'};
       }
 
       &:before {
@@ -51,32 +51,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         font-family: 'Playfair Display', sans-serif;
         font-weight: 500;
         text-transform: uppercase;
-      }
-
-      .service-item {
-        text-align: center;
-        user-select: none;
-
-        &:hover {
-          svg {
-            box-shadow: 0 16px 32px rgba(255, 255, 255, 0.24);
-          }
-        }
-
-        svg {
-          display: block;
-          margin: 0 auto 14px;
-          font-size: 64px;
-          padding: 14px;
-          color: ${colors.secondary};
-          border-radius: 50%;
-          background: #fff;
-          transition: box-shadow 0.3s;
-        }
-
-        h3 {
-          font-weight: 500;
-        }
+        font-size: 16px;
       }
     }
 
@@ -96,11 +71,15 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
       &-icon {
         img {
-          width: 70%;
+          width: 50%;
           display: block;
           margin: 0 auto;
           border-radius: 6px;
           box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+          @media (min-width: 992px) {
+            width: 76%;
+          }
         }
       }
 
@@ -118,6 +97,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         }
 
         .quotes {
+          margin-top: 32px;
           position: relative;
           padding-left: 48px;
 
@@ -140,7 +120,14 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
 
         .social {
           display: flex;
-          margin-top: 36px;
+          margin-top: 40px;
+          margin-bottom: 24px;
+          justify-content: center;
+
+          @media (min-width: 992px) {
+            justify-content: flex-start;
+            margin-bottom: 0;
+          }
 
           a {
             display: flex;
