@@ -8,7 +8,7 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
       position: relative;
       background: url(${BackgroundImg});
       background-size: cover;
-      padding: ${hasHeader ? '86px 16px 48px' : '154px 16px 48px'};
+      padding: ${hasHeader ? '75px 16px 48px' : '154px 16px 48px'};
       color: #fff;
 
       @media (min-width: 768px) {
@@ -166,6 +166,30 @@ export const ServicesWrapper = ({ theme: { colors }, hasHeader }) => css`
 
         > div {
           flex: 1;
+        }
+      }
+
+      .service-card {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 18px;
+        padding: 16px;
+        padding-left: 48px;
+        background: linear-gradient(135deg, #ddd, #f0f0f0);
+        border-radius: 6px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+
+        span {
+          user-select: none;
+          position: absolute;
+          left: -8px;
+          font-size: 64px;
+          line-height: 64px;
+          font-weight: bold;
+          color: #fff;
+          transform: rotateZ(12deg);
+          opacity: 0.6;
         }
       }
     }

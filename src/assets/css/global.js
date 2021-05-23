@@ -6,7 +6,7 @@ export const CustomGlobal = css`
   }
 
   body {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
   }
 `;

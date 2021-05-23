@@ -30,7 +30,7 @@ export const Services = () => {
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 pr-5'>
-                  <h1>Atendimentos</h1>
+                  <h1 className='mb-0'>Atendimentos</h1>
                 </div>
               </div>
             </div>
@@ -116,7 +116,41 @@ export const Services = () => {
                     ou WhatsApp.
                   </p>
                   <h3>Estrutura do atendimento:</h3>
-                  <ul>
+
+                  <div className='row'>
+                    <div className='col-12'>
+                      <div className='service-card'>
+                        <span>1</span>
+                        Anamnese (entrevista inicial)
+                      </div>
+                    </div>
+                    <div className='col-12'>
+                      <div className='service-card'>
+                        <span>2</span>
+                        Avaliação ou solicitação de exames bioquímicos
+                      </div>
+                    </div>
+                    <div className='col-12'>
+                      <div className='service-card'>
+                        <span>3</span>Avaliação alimentar
+                      </div>
+                    </div>
+                    <div className='col-12'>
+                      <div className='service-card'>
+                        <span>4</span>
+                        Definição da melhor conduta junto ao cliente
+                      </div>
+                    </div>
+                    <div className='col-12'>
+                      <div className='service-card'>
+                        <span>5</span>
+                        Em cada retorno, novas condutas são estabelecidas de
+                        acordo com os resultados alcançados
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <ul>
                     <li>Anamnese (entrevista inicial)</li>
                     <li>Avaliação ou solicitação de exames bioquímicos</li>
                     <li>Avaliação alimentar</li>
@@ -125,9 +159,9 @@ export const Services = () => {
                       Em cada retorno, novas condutas são estabelecidas de
                       acordo com os resultados alcançados
                     </li>
-                  </ul>
+                  </ul> */}
 
-                  <p>
+                  <p className='mt-4'>
                     O pagamento é feito via transferência bancária, PIX ou
                     cartão de crédito através do PicPay.
                   </p>
