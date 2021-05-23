@@ -38,12 +38,16 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         margin-bottom: 24px;
         font-weight: 400;
 
-        @media (min-width: 768px) {
-          font-size: 54px;
+        span {
+          font-size: 24px;
         }
 
-        span {
-          font-size: 34px;
+        @media (min-width: 768px) {
+          font-size: 40px;
+
+          span {
+            font-size: 34px;
+          }
         }
       }
 

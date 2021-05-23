@@ -18,7 +18,7 @@ export const Home = () => {
 
   return (
     <TemplateDefault
-      title='Fernanda Calistene Nutricionista - Taiobeiras - MG'
+      title='Nutricionista Fernanda – Sobre os atendimentos'
       description='Especialista em vegetarianismo, veganismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável!'
     >
       <Header transparent={headerIsTransparent} />
@@ -30,8 +30,15 @@ export const Home = () => {
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 pr-5'>
-                  <h5>Seja bem-vind@</h5>
-                  <h1 className='mb-2'>Nutricionista em Taiobeiras</h1>
+                  <h1 className='mb-2'>
+                    Nutricionista
+                    <br />
+                    <span>
+                      Atendimento online sem fronteiras e presencial em
+                      Taiobeiras
+                    </span>
+                  </h1>
+
                   <p className='mb-0'>
                     Foco em nutrição vegetariana e vegana, saúde da mulher e
                     prevenção de doenças.
@@ -47,7 +54,7 @@ export const Home = () => {
                       href='https://api.whatsapp.com/send?phone=5531993287275&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento.'
                       target='_blank'
                     >
-                      Agende sua consulta agora!
+                      Agende sua consulta!
                     </Button>
                   </div>
                 </div>

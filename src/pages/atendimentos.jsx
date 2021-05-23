@@ -30,7 +30,7 @@ export const Services = () => {
             <div className='container'>
               <div className='row align-items-center'>
                 <div className='col-12 pr-5'>
-                  <h1>Atendimento online</h1>
+                  <h1>Atendimentos</h1>
                 </div>
               </div>
             </div>
