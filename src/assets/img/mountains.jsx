@@ -25,7 +25,7 @@ export default Mountains;
 
 // CSS
 const SvgWrapper = css`
-  margin-top: -170px;
+  margin-top: -175px;
   height: 192px;
   width: 100%;
   position: relative;
