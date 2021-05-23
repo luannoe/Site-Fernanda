@@ -18,7 +18,7 @@ export const Home = () => {
 
   return (
     <TemplateDefault
-      title='Nutricionista Fernanda – Sobre os atendimentos'
+      title='Nutricionista Fernanda – Atendimento online e presencial'
       description='Especialista em vegetarianismo, veganismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável!'
     >
       <Header transparent={headerIsTransparent} />

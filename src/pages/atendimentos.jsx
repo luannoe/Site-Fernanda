@@ -16,7 +16,7 @@ export const Services = () => {
 
   return (
     <TemplateDefault
-      title='Fernanda Calistene Nutricionista - Taiobeiras - MG'
+      title='Nutricionista Fernanda – Atendimento online e presencial'
       description='Especialista em vegetarianismo, veganismo e saúde da mulher. Vou te ajudar a ter uma vida mais saudável!'
     >
       <Header transparent={headerIsTransparent} />
