@@ -82,7 +82,11 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
           box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 
           @media (min-width: 992px) {
-            width: 76%;
+            width: 72%;
+          }
+
+          @media (min-width: 1200px) {
+            width: 69%;
           }
         }
       }
