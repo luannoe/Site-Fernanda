@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import Head from 'next/head';
-import Icon from '@assets/img/image.jpeg';
+import Image from '@assets/img/image.png';
 
 // Styles
 import RebootStyle from '@css/reboot';
@@ -21,8 +21,17 @@ const TemplateDefault = ({ children, title, description, canonical }) => {
           content='width=device-width, initial-scale=1, maximum-scale=1'
         />
 
-        <meta property='og:image' content={Icon} />
-        <meta property='og:image:type' content='image/jpeg' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={description} />
+        <meta property='og:image' content={Image} />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:type' content='website' />
+        <meta property='og:locale' content='pt_BR' />
+
+        <meta
+          property='og:url'
+          content='https://www.nutrifernandacalistene.com.br/'
+        />
 
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
