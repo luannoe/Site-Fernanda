@@ -19,7 +19,7 @@ export const Footer = () => {
               <p className='mt-0'>CRN9 24466/P</p>
               <div className='social'>
                 <a
-                  href='mailto:calistenefernanda@gmail.com'
+                  href='mailto:nutrifernandacalistene@gmail.com'
                   title='Entre em contato pelo E-mail'
                   target='_blank'
                   rel='noreferrer'
