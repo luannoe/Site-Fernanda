@@ -20,7 +20,10 @@ const TemplateDefault = ({ children, title, description, canonical }) => {
           name='viewport'
           content='width=device-width, initial-scale=1, maximum-scale=1'
         />
+
         <meta property='og:image' content={Icon} />
+        <meta property='og:image:type' content='image/jpeg' />
+
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap'
@@ -34,7 +37,6 @@ const TemplateDefault = ({ children, title, description, canonical }) => {
           href='https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap'
           rel='stylesheet'
         />
-        <link rel='icon' href={Icon} />
       </Head>
 
       <Global styles={RebootStyle} />
