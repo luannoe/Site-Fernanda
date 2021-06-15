@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nutrifernandacalistene.com.br
+
+# Sitemaps
+Sitemap: https://nutrifernandacalistene.com.br/sitemap.xml
