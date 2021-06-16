@@ -25,7 +25,7 @@ export const HomeWrapper = ({ theme: { colors }, hasHeader }) => css`
         background: linear-gradient(
           135deg,
           ${colors.transparency.primary(0.9)},
-          ${colors.transparency.primaryAccent(0.6)},
+          ${colors.transparency.primaryAccent(0.87)},
           transparent
         );
       }
